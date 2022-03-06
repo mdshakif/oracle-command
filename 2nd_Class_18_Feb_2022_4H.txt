@@ -1,0 +1,131 @@
+show user
+
+select 
+from 
+where
+group by
+having
+order by
+
+select 
+from 
+order by
+
+select table_name 
+from   user_tables;
+
+desc
+describe 
+
+desc departments
+
+desc employees
+
+select *
+from   departments;
+
+select *
+from   employees;
+
+select department_name,location_id
+from   departments;
+
+select employee_id,last_name,salary,hire_date
+from   employees;
+
+select employee_id,last_name,salary,salary+500
+from   employees;
+
+select employee_id,last_name,salary,salary*12
+from   employees;
+
+select employee_id,salary,commission_pct
+from   employees;
+
+select employee_id,last_name,salary,salary*12
+from   employees;
+
+
+select employee_id eid,last_name name,
+       salary sal,salary*12 annual_salary
+from   employees;
+
+
+select employee_id as eid,last_name as name,
+       salary as sal,salary*12  as annual_salary
+from   employees;
+
+select employee_id as eid,last_name as name,
+       salary as sal,salary*12  as annual salary
+from   employees;
+
+select employee_id "Emp ID",last_name "Emp Name",
+       salary "Salary",salary*12 "Annual Salary"
+from   employees;
+
+select employee_id,first_name,last_name,salary
+from   employees;
+
+||
+
+select employee_id,first_name||last_name,salary
+from   employees;
+
+select employee_id,first_name||' '||last_name,salary
+from   employees;
+
+select employee_id,first_name||' '||last_name emp_name,salary
+from   employees;
+
+select employee_id||' '||first_name||' '||last_name||' '||salary emp_info
+from   employees;
+
+select employee_id,first_name||' and last name '||last_name emp_name,salary
+from   employees;
+
+select first_name||' and last name '||last_name ename
+from   employees;
+
+
+select first_name||' and last's name '||last_name ename
+from   employees;
+
+q
+
+select first_name||q'( and last's name )'||last_name ename
+from   employees;
+
+desc employees
+desc departments;
+
+select department_id 
+from   departments;
+
+select department_id 
+from   employees;
+
+distinct 
+
+select distinct department_id 
+from   employees;
+
+select count(distinct department_id)
+from   employees;
+
+========================================================
+
+select employee_id "Emp ID",last_name "Emp Name",
+       salary "Salary",salary*12 "Annual Salary"
+from   employees;
+
+select employee_id,first_name||' '||last_name emp_name,salary
+from   employees;
+
+select employee_id||' '||first_name||' '||last_name||' '||salary emp_info
+from   employees;
+
+select employee_id,first_name||' and last name '||last_name emp_name,salary
+from   employees;
+select count(distinct department_id)
+from   employees;
+======================================================

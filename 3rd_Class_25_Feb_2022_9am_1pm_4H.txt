@@ -1,0 +1,310 @@
+select employee_id,last_name,salary
+from   employees;
+
+
+select employee_id,last_name,salary
+from   employees
+where  employee_id=100;
+
+select employee_id,last_name,salary
+from   employees
+where  salary = 10000;
+
+select employee_id,last_name,salary
+from   employees
+where  salary < 3000;
+
+select employee_id,last_name,salary
+from   employees
+where  salary <= 3000;
+
+select employee_id,last_name,salary
+from   employees
+where  salary >= 12000;
+
+select employee_id,last_name,salary
+from   employees
+where  salary between 4000 and 6000;
+
+select employee_id,last_name,salary
+from   employees
+where  salary in(5000,9000,7000);
+
+select employee_id,last_name,salary,hire_date
+from   employees
+where  last_name=Grant;
+
+select employee_id,last_name,salary,hire_date
+from   employees
+where  last_name='grant';
+
+
+select employee_id,last_name,salary,hire_date
+from   employees
+where  last_name='Grant';
+
+13-JAN-08
+DD-MON-RR
+
+select employee_id,last_name,salary,hire_date
+from   employees
+where  hire_date='13-JAN-08';
+
+select employee_id,last_name,salary,hire_date
+from   employees
+where  hire_date between '01-JAN-08' and '31-DEC-08'
+order  by hire_date;
+
+SELECT employee_id, last_name, job_id
+FROM   employees
+WHERE  department_id = 90 ;
+
+SELECT employee_id, last_name, job_id, department_id
+FROM   employees
+WHERE  department_id = 90 ;
+
+RR
+22
+YY
+22
+RRRR
+2022
+YYYY
+2022
+
+SELECT employee_id, last_name, job_id, department_id
+FROM   employees
+WHERE  department_id <> 90 ;
+
+SELECT last_name
+FROM   employees
+WHERE  last_name BETWEEN 'King' AND 'Smith';
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+LIKE
+
+%
+_
+
+last_name like '%h%';
+last_name like 'K%';
+last_name like 'Sm%';
+last_name like '%l';
+last_name like '_i%';
+last_name like '___p%';
+last_name like '%e_';
+last_name like '%l__';
+
+SELECT employee_id, last_name
+FROM   employees
+WHERE  last_name like '%h%';
+
+SELECT employee_id, last_name
+FROM   employees
+WHERE  last_name like 'K%';
+
+SELECT employee_id, last_name
+FROM   employees
+WHERE  last_name like '%l';
+
+SELECT employee_id, last_name
+FROM   employees
+WHERE  last_name like '_i%';
+
+SELECT employee_id, last_name
+FROM   employees
+WHERE  last_name like '___p%';
+
+SELECT employee_id, last_name
+FROM   employees
+WHERE  last_name like '%l__';
+
+SELECT last_name, manager_id
+FROM   employees
+WHERE  manager_id IS NULL ;
+
+SELECT last_name, salary,commission_pct
+FROM   employees
+WHERE  commission_pct IS NULL ;
+
+SELECT last_name, salary,commission_pct
+FROM   employees
+WHERE  commission_pct IS NOT NULL ;
+
+SELECT employee_id, last_name, job_id, salary
+FROM   employees
+WHERE  salary >= 10000
+AND    job_id LIKE '%MAN%' ;
+
+SELECT employee_id, last_name, job_id, salary
+FROM   employees
+WHERE  salary >= 10000
+or     job_id LIKE '%MAN%' ;
+
+SELECT last_name, job_id
+FROM   employees
+WHERE  job_id IN ('IT_PROG', 'ST_CLERK', 'SA_REP') ;
+
+SELECT last_name, job_id
+FROM   employees
+WHERE  job_id NOT IN ('IT_PROG', 'ST_CLERK', 'SA_REP') ;
+
+SELECT last_name, job_id, salary
+FROM   employees
+WHERE  job_id = 'SA_REP'
+OR     job_id = 'AD_PRES'
+AND    salary > 15000;
+
+SELECT last_name, job_id, salary
+FROM   employees
+WHERE  (job_id = 'SA_REP'
+OR     job_id = 'AD_PRES')
+AND    salary > 15000;
+
+SELECT last_name, job_id, department_id, hire_date
+FROM   employees
+ORDER  BY hire_date ;
+
+SELECT last_name, job_id, department_id, hire_date
+FROM   employees
+ORDER BY hire_date asc;
+
+SELECT last_name, job_id, department_id, hire_date
+FROM  employees
+ORDER BY hire_date desc;
+
+SELECT last_name, job_id, department_id, hire_date
+FROM   employees
+ORDER BY last_name;
+
+1.
+SELECT   employee_id,last_name name,department_id,salary
+FROM     employees
+ORDER BY employee_id;
+
+2.
+SELECT   employee_id,last_name name,department_id,salary
+FROM     employees
+ORDER BY 4 desc;
+
+3.
+SELECT   employee_id,last_name name,department_id,salary
+FROM     employees
+ORDER BY name;
+
+SELECT   employee_id,last_name name,department_id,salary
+FROM     employees
+ORDER BY department_id,salary desc;
+
+SELECT   employee_id,last_name name,department_id,salary
+FROM     employees
+ORDER BY department_id desc,4 asc;
+
+SELECT   employee_id,last_name name,department_id did,salary sal
+FROM     employees
+ORDER BY did desc,sal asc;
+
+SELECT employee_id, first_name
+FROM   employees
+ORDER  BY employee_id;
+
+SELECT employee_id, first_name
+FROM   employees
+ORDER  BY employee_id desc;
+
+EMPLOYEE_ID FIRST_NAME
+----------- --------------------
+        206 William
+        205 Shelley
+        204 Hermann
+        203 Susan
+
+        202 Pat
+        201 Michael
+        200 Jennifer
+
+        199 Douglas
+        198 Donald
+        197 Kevin
+        196 Alana
+
+
+SELECT employee_id, first_name
+FROM   employees
+ORDER  BY employee_id desc
+FETCH FIRST 3 ROWS ONLY;
+
+SELECT employee_id, first_name
+FROM   employees
+ORDER  BY employee_id desc
+OFFSET 4 ROWS FETCH NEXT 3 ROWS ONLY;
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id=100;
+
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id=110;
+
+&
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id = &emp_id;
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    &condition;
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     &table_name
+where    &condition;
+
+SELECT   &col1,&col2,&col3
+FROM     &table_name
+where    &condition
+order by &order_by;
+
+SELECT   &&col1,&&col2,&&col3
+FROM     &&table_name
+where    &condition
+order by &order_by;
+
+SELECT last_name, department_id, salary*12
+FROM   employees
+WHERE  job_id = '&job_title' ;
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id = &emp_id;
+
+define emp_id=115
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id = &emp_id;
+
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id = &eid;
+
+undefine emp_id
+
+SELECT   employee_id,last_name,salary,hire_date
+FROM     employees
+where    employee_id = &emp_id;
+
+set verify off
+
+SELECT   &col11
+FROM     employees
+where    employee_id = &emp_id;
+
